@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+
+target/
+build/
+dist/
+
+*.log
+nginx-1.18.0/logs/
+
+.DS_Store
+Thumbs.db
