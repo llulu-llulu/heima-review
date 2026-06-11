@@ -75,8 +75,18 @@
 
 - 模块名称：店铺智能问答 RAG
 - 分支：`feature/ai-upgrade-dianping`
-- commit message：待提交 `feat: add shop rag qa module`
-- commit hash：待提交后补充
-- push 状态：待提交后尝试
+- commit message：`feat: add shop rag qa module`
+- commit hash：`17e26ed`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
 - 测试命令和结果：`mvn test` 通过，11 tests, 0 failures, 0 errors
 - 前端接口兼容性：只新增 `/ai/shop/**`，不修改旧接口
+
+## 2026-06-11 阶段 8：轻量级推荐 Agent
+
+- 模块名称：轻量级推荐 Agent
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：待提交 `feat: add lightweight recommendation agent`
+- commit hash：待提交后补充
+- push 状态：待提交后尝试
+- 测试命令和结果：`mvn test` 通过，12 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/agent/recommend-shop`，不修改旧接口
