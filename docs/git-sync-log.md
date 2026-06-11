@@ -35,8 +35,18 @@
 
 - 模块名称：接口契约回归测试
 - 分支：`feature/ai-upgrade-dianping`
-- commit message：待提交 `test: add api contract regression tests`
-- commit hash：待提交后补充
-- push 状态：待提交后尝试
+- commit message：`test: add api contract regression tests`
+- commit hash：`970e872`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
 - 测试命令和结果：`mvn test` 通过，5 tests, 0 failures, 0 errors
 - 前端接口兼容性：新增测试和文档，不修改旧接口
+
+## 2026-06-11 阶段 4：工程化优化
+
+- 模块名称：工程化优化与 P0 兼容性修复
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：待提交 `refactor: improve project engineering without breaking api`
+- commit hash：待提交后补充
+- push 状态：待提交后尝试
+- 测试命令和结果：`mvn test` 通过，8 tests, 0 failures, 0 errors
+- 前端接口兼容性：未改 URL、HTTP 方法、请求参数或 Result 基础结构；修复了旧前端受影响的 Result 嵌套和匿名接口拦截问题
