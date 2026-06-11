@@ -65,8 +65,18 @@
 
 - 模块名称：AI 商家运营助手
 - 分支：`feature/ai-upgrade-dianping`
-- commit message：待提交 `feat: add ai merchant copilot`
-- commit hash：待提交后补充
-- push 状态：待提交后尝试
+- commit message：`feat: add ai merchant copilot`
+- commit hash：`a6335fd`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
 - 测试命令和结果：`mvn test` 通过，10 tests, 0 failures, 0 errors
 - 前端接口兼容性：只新增 `/ai/merchant/**`，不修改旧接口
+
+## 2026-06-11 阶段 7：店铺智能问答 RAG
+
+- 模块名称：店铺智能问答 RAG
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：待提交 `feat: add shop rag qa module`
+- commit hash：待提交后补充
+- push 状态：待提交后尝试
+- 测试命令和结果：`mvn test` 通过，11 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/shop/**`，不修改旧接口
