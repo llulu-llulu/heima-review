@@ -45,8 +45,18 @@
 
 - 模块名称：工程化优化与 P0 兼容性修复
 - 分支：`feature/ai-upgrade-dianping`
-- commit message：待提交 `refactor: improve project engineering without breaking api`
-- commit hash：待提交后补充
-- push 状态：待提交后尝试
+- commit message：`refactor: improve project engineering without breaking api`
+- commit hash：`102a941`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
 - 测试命令和结果：`mvn test` 通过，8 tests, 0 failures, 0 errors
 - 前端接口兼容性：未改 URL、HTTP 方法、请求参数或 Result 基础结构；修复了旧前端受影响的 Result 嵌套和匿名接口拦截问题
+
+## 2026-06-11 阶段 5：AI 基础架构
+
+- 模块名称：Mock LLM 基础架构
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：待提交 `feat: add mock llm client infrastructure`
+- commit hash：待提交后补充
+- push 状态：待提交后尝试
+- 测试命令和结果：`mvn test` 通过，9 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/llm/chat`，不修改旧接口
