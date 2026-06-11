@@ -43,6 +43,8 @@ Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
 BUILD SUCCESS
 ```
 
+验证时间：2026-06-11。未运行 `mvn spring-boot:run`，原因是启动需要本地 MySQL 与 Redis 持续可用，并且会占用当前任务会话；本轮已完成不依赖外部服务的编译与单元/契约测试。
+
 ## 仍然存在的问题
 
 - 未提交本地 `application.yaml`，需要用户按本地环境配置 MySQL/Redis。
