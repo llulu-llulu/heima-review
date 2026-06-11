@@ -7,7 +7,7 @@
 ### 当前项目结构
 
 ```text
-D:\code\4-heima_reviews
+repo-root
 ├── hm-dianping/              Spring Boot 后端项目，内部存在独立 .git
 ├── nginx-1.18.0/html/hmdp/   HMDP 前端静态页面，使用 Vue + Axios + Element UI
 ├── nginx-1.18.0/             本地 nginx 目录
