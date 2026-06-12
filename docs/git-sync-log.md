@@ -1,0 +1,133 @@
+# Git 同步日志
+
+## 2026-06-11 阶段 0：准备工作
+
+- 模块名称：准备工作与工作日志
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`docs: add initial project worklog`
+- commit hash：`42145a6`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：本阶段只生成文档，未运行测试
+- 前端接口兼容性：未修改前后端业务代码，不影响旧接口
+- 备注：已配置远程仓库 `https://github.com/llulu-llulu/heima-review.git`；根仓库存在大量未跟踪文件，后续只提交本阶段相关文件。
+
+## 2026-06-11 阶段 1：前后端接口契约扫描
+
+- 模块名称：前后端接口契约扫描
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`docs: add frontend backend api contract`
+- commit hash：`d6db3d6`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：本阶段只生成文档，未运行测试
+- 前端接口兼容性：未修改 Controller 和前端代码，只记录接口契约与风险
+
+## 2026-06-11 阶段 2：项目工程审计
+
+- 模块名称：项目工程审计
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`docs: add project audit report`
+- commit hash：`634911b`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：本阶段只生成文档，未运行测试
+- 前端接口兼容性：未修改业务代码，不影响旧接口
+
+## 2026-06-11 阶段 3：接口回归保护
+
+- 模块名称：接口契约回归测试
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`test: add api contract regression tests`
+- commit hash：`970e872`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，5 tests, 0 failures, 0 errors
+- 前端接口兼容性：新增测试和文档，不修改旧接口
+
+## 2026-06-11 阶段 4：工程化优化
+
+- 模块名称：工程化优化与 P0 兼容性修复
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`refactor: improve project engineering without breaking api`
+- commit hash：`102a941`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，8 tests, 0 failures, 0 errors
+- 前端接口兼容性：未改 URL、HTTP 方法、请求参数或 Result 基础结构；修复了旧前端受影响的 Result 嵌套和匿名接口拦截问题
+
+## 2026-06-11 阶段 5：AI 基础架构
+
+- 模块名称：Mock LLM 基础架构
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`feat: add mock llm client infrastructure`
+- commit hash：`6c24503`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，9 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/llm/chat`，不修改旧接口
+
+## 2026-06-11 阶段 6：AI 商家运营助手
+
+- 模块名称：AI 商家运营助手
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`feat: add ai merchant copilot`
+- commit hash：`a6335fd`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，10 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/merchant/**`，不修改旧接口
+
+## 2026-06-11 阶段 7：店铺智能问答 RAG
+
+- 模块名称：店铺智能问答 RAG
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`feat: add shop rag qa module`
+- commit hash：`17e26ed`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，11 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/shop/**`，不修改旧接口
+
+## 2026-06-11 阶段 8：轻量级推荐 Agent
+
+- 模块名称：轻量级推荐 Agent
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`feat: add lightweight recommendation agent`
+- commit hash：`2e269e8`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，12 tests, 0 failures, 0 errors
+- 前端接口兼容性：只新增 `/ai/agent/recommend-shop`，不修改旧接口
+
+## 2026-06-11 阶段 9：前端 AI 接入说明
+
+- 模块名称：前端 AI 接入说明
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`docs: add frontend ai integration guide`
+- commit hash：`39af91c`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：无 npm 工程，本阶段只新增文档
+- 前端接口兼容性：不修改旧前端页面和公共 request 封装
+
+## 2026-06-11 阶段 10：文档和简历材料
+
+- 模块名称：最终文档与简历材料
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`docs: add final project documentation`
+- commit hash：`b1ed5f1`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：文档阶段不新增测试，沿用最近一次 `mvn test` 通过结果
+- 前端接口兼容性：只修改文档，不影响旧接口
+
+## 2026-06-11 阶段 11：测试和验证
+
+- 模块名称：最终测试验证
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：`test: verify ai upgraded dianping project`
+- commit hash：`499fd04`
+- push 状态：成功，已推送到 `origin/feature/ai-upgrade-dianping`
+- 测试命令和结果：`mvn test` 通过，12 tests, 0 failures, 0 errors
+- 前端接口兼容性：只更新验证文档，不修改代码或接口
+- 备注：未运行 `mvn spring-boot:run`，因为需要本地 MySQL/Redis 持续服务并会占用当前会话
+
+## 2026-06-11 收尾：同步日志补全
+
+- 模块名称：Git 同步日志补全
+- 分支：`feature/ai-upgrade-dianping`
+- commit message：待提交 `docs: update final git sync log`
+- commit hash：待提交后补充
+- push 状态：待提交后尝试
+- 测试命令和结果：仅更新日志，未重复运行测试；上一阶段 `mvn test` 已通过
+- 前端接口兼容性：只更新文档，不影响旧接口

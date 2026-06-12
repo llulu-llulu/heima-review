@@ -51,17 +51,17 @@ public class BlogController {
 
     @GetMapping("/hot")
     public Result queryHotBlog(@RequestParam(value = "current", defaultValue = "1") Integer current) {
-        return Result.ok(blogService.queryHotBlog(current));
+        return blogService.queryHotBlog(current);
     }
 
     @GetMapping("/{id}")
     public Result queryBlog(@PathVariable("id") Long id) {
-        return Result.ok(blogService.queryBlogById(id));
+        return blogService.queryBlogById(id);
     }
 
     @GetMapping("/likes/{id}")
     public Result queryLikes(@PathVariable("id") Long id) {
-        return Result.ok(blogService.queryLikes(id));
+        return blogService.queryLikes(id);
     }
 
     /**

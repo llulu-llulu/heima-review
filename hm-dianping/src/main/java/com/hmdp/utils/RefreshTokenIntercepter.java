@@ -9,7 +9,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -27,14 +26,12 @@ public class RefreshTokenIntercepter implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        //获取session
-        HttpSession session = request.getSession();
         //获取token
         String token = request.getHeader("authorization");
         //校验token是否为空
         if (StrUtil.isBlank(token)) {
             //用户未登录，跳转到登录页
-            return false;
+            return true;
         }
 
         String userKey = LOGIN_USER_KEY + token;
@@ -42,7 +39,7 @@ public class RefreshTokenIntercepter implements HandlerInterceptor {
         Map<Object, Object> userMap = stringRedisTemplate.opsForHash().entries(userKey);
         if (userMap.isEmpty()) {
             //用户未登录，跳转到登录页
-            return false;
+            return true;
         }
 
         //将userMap转换为UserDTO

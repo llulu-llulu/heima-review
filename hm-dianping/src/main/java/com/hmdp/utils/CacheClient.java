@@ -94,7 +94,7 @@ public class CacheClient {
         boolean isLock = tryLock(lockKey);
 
         //6.2.判断是否获取锁成功
-        if (!isLock) {
+        if (isLock) {
             //6.3.成功，开启独立线程，实现缓存重建
             CACHE_REBUILDER_EXCUTER.submit(() -> {
                 try {
