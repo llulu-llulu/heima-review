@@ -159,7 +159,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
         String lockKey = LOCK_SHOP_KEY + id;
         boolean isLock = tryLock(lockKey);
-        if (!isLock) {
+        if (isLock) {
             CACHE_REBUILDER_EXCUTER.submit(() -> {
                 try {
                     this.saveShop2RedisCache(id, 20L);
