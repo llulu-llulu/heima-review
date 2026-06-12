@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>AI 本地生活助手</title>
+  <link rel="stylesheet" href="./css/ai.css">
+</head>
+<body>
+<div class="page">
+  <header class="top-bar">
+    <a class="back-link" href="index.html">返回首页</a>
+    <div>
+      <h1>AI 本地生活助手</h1>
+      <p>基于黑马点评店铺、博客、优惠券等数据，提供智能问答、商家文案和本地生活推荐能力。</p>
+    </div>
+    <span id="loginStatus" class="login-status">检查登录状态中</span>
+  </header>
+
+  <section id="loginNotice" class="notice notice-warning hidden">
+    <div>
+      <strong>请先登录后使用 AI 助手</strong>
+      <p>AI 接口需要携带登录 token 才能访问。</p>
+    </div>
+    <a class="button button-secondary" href="login.html">去登录</a>
+  </section>
+
+  <main class="content">
+    <section class="card">
+      <div class="card-title">
+        <h2>AI 聊天测试</h2>
+        <span>POST /api/ai/llm/chat</span>
+      </div>
+      <label for="chatPrompt">Prompt</label>
+      <textarea id="chatPrompt" rows="4">帮我生成一条火锅店营销文案</textarea>
+      <button id="chatBtn" class="button">生成回复</button>
+      <div id="chatResult" class="result empty">等待生成回复</div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">
+        <h2>店铺智能问答</h2>
+        <span>POST /api/ai/shop/ask</span>
+      </div>
+      <label for="shopQuestion">问题</label>
+      <textarea id="shopQuestion" rows="4">推荐一家适合晚上吃饭的火锅店</textarea>
+      <div class="form-grid">
+        <div>
+          <label for="shopLimit">返回数量</label>
+          <input id="shopLimit" type="number" min="1" max="20" value="5">
+        </div>
+        <div>
+          <label for="shopTypeId">分类 ID（可选）</label>
+          <input id="shopTypeId" type="number" min="1" placeholder="例如 1">
+        </div>
+      </div>
+      <button id="shopAskBtn" class="button">开始问答</button>
+      <div id="shopAskResult" class="result empty">等待问答结果</div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">
+        <h2>商家文案生成</h2>
+        <span>POST /api/ai/merchant/copywriting</span>
+      </div>
+      <div class="form-grid">
+        <div>
+          <label for="copyShopId">店铺 ID</label>
+          <input id="copyShopId" type="number" min="1" value="1">
+        </div>
+        <div>
+          <label for="copyActivityType">活动类型</label>
+          <input id="copyActivityType" type="text" value="满减促销">
+        </div>
+        <div>
+          <label for="copyTargetUser">目标用户</label>
+          <input id="copyTargetUser" type="text" value="年轻人">
+        </div>
+        <div>
+          <label for="copyTone">语气风格</label>
+          <input id="copyTone" type="text" value="活泼">
+        </div>
+      </div>
+      <label for="copyExtraRequirement">额外要求</label>
+      <textarea id="copyExtraRequirement" rows="3">突出性价比</textarea>
+      <button id="copywritingBtn" class="button">生成文案</button>
+      <div id="copywritingResult" class="result empty">等待生成文案</div>
+    </section>
+  </main>
+</div>
+<script src="./js/ai.js"></script>
+</body>
+</html>

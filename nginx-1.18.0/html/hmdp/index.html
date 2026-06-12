@@ -14,6 +14,24 @@
       .el-input__inner {
           border-radius: 20px;
       }
+      .ai-entry {
+          position: fixed;
+          right: 12px;
+          bottom: 72px;
+          z-index: 20;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 74px;
+          height: 34px;
+          padding: 0 12px;
+          border-radius: 18px;
+          color: #fff;
+          background: #ff6633;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+          font-size: 13px;
+          text-decoration: none;
+      }
   </style>
 </head>
 <body>
@@ -49,6 +67,7 @@
       </div>
     </div>
   </div>
+  <a href="ai.html" class="ai-entry">AI 助手</a>
   <foot-bar :active-btn="1"></foot-bar>
 </div>
 <script src="./js/vue.js"></script>
